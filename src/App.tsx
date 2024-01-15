@@ -27,9 +27,8 @@ function App() {
   };
   
   return (
-    <div className="">
-      <label htmlFor="chips-input" className="chips">
-        <span>Chip x</span>
+    <div className="bg-[#f9f9fa] h-screen">
+      <label htmlFor="chips-input" className="relative flex flex-wrap border-b-2 border-blue-500 py-2 gap-2">
         {selectedProfiles.map((profile) => (
           <Chip profile={profile} selectedProfiles={selectedProfiles} setSelectedProfiles={setSelectedProfiles} />
         ))}
@@ -39,8 +38,11 @@ function App() {
             onChange={(e) => searchProfiles(e.target.value)}
             type="text"
             id="chips-input"
+            className="outline-none bg-[#f9f9fa]"
           />
+          <div className="absolute mt-3 w-">
           {showList && <ShowProfileList profiles={profiles} setSelectedProfiles={setSelectedProfiles} />}
+          </div>
         </div>
       </label>
     </div>
