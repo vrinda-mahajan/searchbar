@@ -70,6 +70,7 @@ function App() {
           <div className="absolute mt-3 w-">
             {showList && (
               <ShowProfileList
+              inputText={inputText}
                 profiles={profiles}
                 setSelectedProfiles={setSelectedProfiles}
               />
